@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "shards": 16,
+  "bufferSize": 50000,
+  "compression": {
+    "priority": ["zstd", "brotli", "gzip"],
+    "level": {
+      "zstd": 19,
+      "brotli": 11,
+      "gzip": 9
+    }
+  },
+  "outputDir": "./generated",
+  "tmpDir": "./tmp/ioc-pipeline",
+  "publisher": {
+    "endpoint": "",
+    "retryMax": 5,
+    "retryDelay": 2000,
+    "timeout": 600000,
+    "concurrency": 2
+  },
+  "sources": {
+    "concurrency": 3
+  }
+}
